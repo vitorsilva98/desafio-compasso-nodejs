@@ -6,9 +6,10 @@ const {
 
 const register = async (req, res, next) => {
     try {
+        const { name, state } = req.body;
         const city = await City.create({
-            name: req.body.name,
-            state: req.body.state.toUpperCase()
+            name: name,
+            state: state ? state.toUpperCase() : state
         });
         res.status(StatusCodes.CREATED).json(city);
     } catch (error) {
@@ -21,7 +22,7 @@ const findByName = async (req, res, next) => {
         const cities = await City.findAll({
             where: {
                 name: {
-                    [Op.like]: `%${req.params.name}%`
+                    [Op.like]: `%${req.params.name.toLowerCase()}%`
                 }
             }
         });

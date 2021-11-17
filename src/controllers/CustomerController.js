@@ -17,7 +17,7 @@ const register = async (req, res, next) => {
         } else {
             const customer = await Customer.create({
                 fullName,
-                gender,
+                gender: gender ? gender.toUpperCase() : gender,
                 birthDate,
                 age,
                 cityId
@@ -41,7 +41,7 @@ const findByName = async (req, res, next) => {
         const customers = await Customer.findAll({
             where: {
                 fullName: {
-                    [Op.like]: `%${req.params.name}%`
+                    [Op.like]: `%${req.params.name.toLowerCase()}%`
                 }
             },
             include: { association: "city" },

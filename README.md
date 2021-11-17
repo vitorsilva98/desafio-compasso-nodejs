@@ -37,17 +37,76 @@ API desenvolvida para a etapa de desafio técnico no processo seletivo para vaga
     ```
     npm start
     ```
----
 4. Caso preferir, rode pelo docker
     ```
     docker-compose up
     ```
----
 5. Para rodar os testes
     ```
     npm test
     ```
+
+
+## Rotas
 ---
+### City
+- **[POST] /cities** 
 
+Exemplo body
+```
+{
+    "name": "São Paulo",
+    "state": "SP"
+}
+```
 
-### Para ter acesso as rotas e payloads abra o arquivo "compass-api.postman_collection.json" no Postman
+Os estados devem ser enviados no formato de sigla: 
+```
+"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"
+```
+
+- **[GET] /cities/findByName/:name**
+
+- **[GET] /cities/findByState/:state**
+
+---
+### Customer
+- **[POST] /customers**
+
+Exemplo body
+```
+{
+    "fullName": "Vitor Silva",
+    "gender": "M",
+    "birthDate": "1998-11-08",
+    "age": 23,
+    "cityId": 1
+}
+```
+
+Sexo deve ser enviado no formato abreviado: 
+```
+"M", "F", "NB", "O"
+```
+
+Data de aniversário deve estar no formato americano:
+```
+YYYY-MM-DD
+```
+
+- **[GET] /customers/:id**
+
+- **[GET] /customers/findByName/:name**
+
+- **[PATCH] /customers/:id**
+
+Exemplo body
+```
+{
+    "fullName": "Vitor Silva Sauro"
+}
+```
+
+- **[DELETE] /customers/:id**
+
+#### Também é possível abrir o arquivo "compass-api.postman_collection.json" no Postman para realização de testes manuais

@@ -19,6 +19,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(2),
             allowNull: false,
             validate: {
+                notNull: {
+                    msg: "Sexo não pode ser nulo"
+                },
                 isIn: {
                     args: [genders],
                     msg: `Sexo inválido. Lista de valores válidos: ${genders.join(
@@ -57,8 +60,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
+                notNull: {
+                    msg: "Idade não pode ser nulo"
+                },
                 min: {
-                    args: [0],
+                    args: [1],
                     msg: "Idade deve ser maior que zero"
                 }
             }

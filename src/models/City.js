@@ -18,6 +18,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(2),
             allowNull: false,
             validate: {
+                notNull: {
+                    msg: "Nome do estado não pode ser nulo"
+                },
                 isIn: {
                     args: [states],
                     msg: `Nome do estado inválido. Lista de valores válidos: ${states.join(
