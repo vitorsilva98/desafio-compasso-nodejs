@@ -2,7 +2,7 @@
 
 API desenvolvida para a etapa de desafio técnico no processo seletivo para vaga de desenvolvedor back-end NodeJS na Compass
 
-link da descrição do desafio: https://github.com/recrutamento-compasso/NodeJS-Interview
+Link para a descrição do desafio: https://github.com/recrutamento-compasso/NodeJS-Interview
 
 
 ## Tecnologias
