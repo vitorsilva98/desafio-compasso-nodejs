@@ -2,6 +2,8 @@
 
 API desenvolvida para a etapa de desafio técnico no processo seletivo para vaga de desenvolvedor back-end NodeJS na Compass
 
+link da descrição do desafio: https://github.com/recrutamento-compasso/NodeJS-Interview
+
 
 ## Tecnologias
 - [Express](https://expressjs.com/)           | WEB framework para Node.js
@@ -82,7 +84,7 @@ Exemplo body
 
 Sexo deve ser enviado no formato abreviado: 
 ```
-"M", "F", "NB", "O"
+"M" (Masculino), "F" (Feminino), "NB" (Não-binário), "O" (Outro)
 ```
 
 Data de aniversário deve estar no formato americano:
