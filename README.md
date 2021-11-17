@@ -4,7 +4,6 @@ API desenvolvida para a etapa de desafio técnico no processo seletivo para vaga
 
 
 ## Tecnologias
----
 - [Express](https://expressjs.com/)           | WEB framework para Node.js
 - [Sequelize](https://sequelize.org/master/)  | ORM para Node.js
 - [SQLite](https://www.sqlite.org/index.html) | Base de dados relacional que dispensa o uso de um servidor na sua atuação.
@@ -13,7 +12,6 @@ API desenvolvida para a etapa de desafio técnico no processo seletivo para vaga
 
 
 ## Pré-requisitos
----
 #### Rodar com NPM
 - [Node.js](https://nodejs.org/en/)
 - [NPM](https://www.npmjs.com/)
@@ -24,7 +22,6 @@ API desenvolvida para a etapa de desafio técnico no processo seletivo para vaga
 
 
 ## Instalação e execução
----
 1. Faça o clone do projeto
     ```
     git clone https://github.com/vitorsilva98/desafio-compasso-nodejs.git
@@ -48,7 +45,6 @@ API desenvolvida para a etapa de desafio técnico no processo seletivo para vaga
 
 
 ## Rotas
----
 ### City
 - **[POST] /cities** 
 
